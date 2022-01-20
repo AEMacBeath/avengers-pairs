@@ -38,14 +38,18 @@ body {
     margin: 25% 10%;
 }
 
-.card {
+.cards {
     position: relative;
     display: inline-block;
     height: 15%;
     width: 25%;
     margin: 3%;
+    border-radius: 50%;
 
-    background-color: black;
+    background-color: white;
+    background-image: ""; /* to be allocated by javascript */
+    background-size: cover;
+    background-position: center;
 }
 
 #instructions {
