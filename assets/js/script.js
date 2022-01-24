@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function gameSetup() {
-    let icons = ['black-panther.png', 'captain-america.png', 'hulk.png', 'iron-man.png', 'spider-man.png', 'thor.png'];
+    let icons = ['black-panther.png', 'captain-america.png', 'hulk.png', 'iron-man.png', 'spider-man.png', 'thor.png', 'black-widow.png', 'loki.png'];
     let cards = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'];
 
     // 1st card allocation
