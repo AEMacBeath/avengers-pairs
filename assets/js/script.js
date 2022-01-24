@@ -175,10 +175,11 @@ document.addEventListener('DOMContentLoaded', function gameSetup() {
 
     console.log(icons);
     console.log(cards);
+    
 })
 
 function gamePlay() {
-
+    
 }
 
 function gameComplete() {
