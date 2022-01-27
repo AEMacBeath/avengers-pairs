@@ -11,11 +11,30 @@ function gameSetup() {
 
         document.getElementById(document.getElementsByClassName('cards')[i].id).style.backgroundImage = 'url(' + '../assets/images/' + icons[i] + ')';
         document.getElementsByClassName('cards')[i].style.visibility='hidden';
+
     }
-
-    
 }
 
-function gamePlay() {
-    
+function gamePlay(event) {
+
+    let id = this.id;
+    id = id.split('Container')[0];
+
+    document.getElementById(id).style.visibility='visible';
+    console.log('Clicked');
+
 }
+
+// Event listeners for each button to run gamePlay
+document.getElementById('card0Container').addEventListener('click', gamePlay);
+document.getElementById('card1Container').addEventListener('click', gamePlay);
+document.getElementById('card2Container').addEventListener('click', gamePlay);
+document.getElementById('card3Container').addEventListener('click', gamePlay);
+document.getElementById('card4Container').addEventListener('click', gamePlay);
+document.getElementById('card5Container').addEventListener('click', gamePlay);
+document.getElementById('card6Container').addEventListener('click', gamePlay);
+document.getElementById('card7Container').addEventListener('click', gamePlay);
+document.getElementById('card8Container').addEventListener('click', gamePlay);
+document.getElementById('card9Container').addEventListener('click', gamePlay);
+document.getElementById('card10Container').addEventListener('click', gamePlay);
+document.getElementById('card11Container').addEventListener('click', gamePlay);
