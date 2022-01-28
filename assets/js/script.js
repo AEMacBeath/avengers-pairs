@@ -19,7 +19,7 @@ let clickedCard1 = '';
 let clickedCard2 = '';
 let clickedCard1Id = '';
 let clickedCard2Id = '';
-let matchedPairs = [''];
+let matchedPairs = 0;
 
 // Play game
 function gamePlay(event) {
@@ -70,23 +70,32 @@ function gamePlay(event) {
 
             } else {
 
+                matchedPairs++;
+                console.log('matchedPairs = ', matchedPairs);
+
                 clickedCard1 = '';
                 clickedCard2 = '';
                 clickedCard1Id = '';
                 clickedCard2Id = '';
 
+                // Game Complete
+                if (matchedPairs == 6) {
+                    console.log('gameComplete')
+                };
+
             };
 
         }, 500);
 
+
+
     };
 
-    console.log('clickedCard1 = ', clickedCard1);
-    console.log('clickedCard2 = ', clickedCard2);
+    // console.log('clickedCard1 = ', clickedCard1);
+    // console.log('clickedCard2 = ', clickedCard2);
 
-    console.log('clickedCard1Id = ', clickedCard1Id);
-    console.log('clickedCard2Id = ', clickedCard2Id);
-
+    // console.log('clickedCard1Id = ', clickedCard1Id);
+    // console.log('clickedCard2Id = ', clickedCard2Id);
 
 }
 
