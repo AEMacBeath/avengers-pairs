@@ -14,18 +14,23 @@ function gameSetup() {
     };
 }
 
+// Set variables for gamePlay()
 let clickedCard1 = '';
 let clickedCard2 = '';
 let clickedCard1Id = '';
 let clickedCard2Id = '';
+let matchedPairs = [''];
 
+// Play game
 function gamePlay(event) {
 
+    // Get card div id from container id and make clicked icon visible
     let id = this.id;
     id = id.split('Container')[0];
 
     document.getElementById(id).style.visibility = 'visible';
 
+    // Set clickedCard1 and clickedCard2 to icon name to check for a match
     if (clickedCard1 == '') {
 
         clickedCard1 = document.getElementById(id).getAttribute('name');
@@ -36,6 +41,7 @@ function gamePlay(event) {
 
     };
 
+    // Get Ids for clickedCard1 and clickedCard2
     if (clickedCard1Id == '') {
 
         clickedCard1Id = id;
@@ -46,6 +52,8 @@ function gamePlay(event) {
 
     };
 
+    // When 2nd card is clicked compare clickedCard1 with clickedCard2. After 0.5 seconds hide cards if they don't match.
+    // Reset variables for next attempt.
     if (clickedCard2 != '') {
 
         setTimeout(function () {
@@ -69,8 +77,7 @@ function gamePlay(event) {
 
             };
 
-        }, 1000);
-
+        }, 500);
 
     };
 
@@ -79,6 +86,8 @@ function gamePlay(event) {
 
     console.log('clickedCard1Id = ', clickedCard1Id);
     console.log('clickedCard2Id = ', clickedCard2Id);
+
+
 }
 
 // Event listeners for each card div to run gamePlay
