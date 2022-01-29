@@ -4,6 +4,8 @@ let icons = ['black-panther.png', 'captain-america.png', 'hulk.png', 'iron-man.p
 
 function gameSetup() {
 
+    document.getElementById('game-complete').style.visibility='hidden';
+
     icons = icons.sort(() => Math.random() - 0.5);
 
     for (let i = 0; i <= 11; i++) {
@@ -80,7 +82,10 @@ function gamePlay(event) {
 
                 // Game Complete
                 if (matchedPairs == 6) {
-                    console.log('gameComplete')
+
+                    document.getElementById('game-complete').style.visibility='visible';
+
+                    console.log('gameComplete');
                 };
 
             };
