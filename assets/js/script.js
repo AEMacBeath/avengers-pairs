@@ -22,6 +22,7 @@ let clickedCard2 = '';
 let clickedCard1Id = '';
 let clickedCard2Id = '';
 let matchedPairs = 0;
+let attempts = 0;
 
 // Play game
 function gamePlay(event) {
@@ -31,6 +32,8 @@ function gamePlay(event) {
     id = id.split('Container')[0];
 
     document.getElementById(id).style.visibility = 'visible';
+
+    attempts = attempts + 1;
 
     // Set clickedCard1 and clickedCard2 to icon name to check for a match
     if (clickedCard1 == '') {
@@ -84,8 +87,12 @@ function gamePlay(event) {
                 if (matchedPairs == 6) {
 
                     document.getElementById('game-complete').style.visibility='visible';
+                    let attemptSpan = document.getElementById('attempts');
+                    attemptSpan.innerText = attempts;
 
                     console.log('gameComplete');
+
+                    console.log(attempts);
                 };
 
             };

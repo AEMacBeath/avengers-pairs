@@ -74,5 +74,22 @@ body {
     height: 60%;
     width: 80%;
     margin: 25% 10%;
-    background-color: black;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(175, 31, 36);
+}
+
+#game-complete > h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 0.5rem;
+}
+
+#game-complete p {
+    font-size: 1.3rem;
+}
+
+#attempts {
+    text-decoration: underline; 
+    font-size: 2rem;
 }
