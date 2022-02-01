@@ -10,7 +10,7 @@ function gameSetup() {
 
     for (let i = 0; i <= 11; i++) {
 
-        document.getElementById(document.getElementsByClassName('cards')[i].id).style.backgroundImage = `url(/assets/images/${icons[i]})`;
+        document.getElementById(document.getElementsByClassName('cards')[i].id).style.backgroundImage = `url(assets/images/${icons[i]})`;
         document.getElementById(document.getElementsByClassName('cards')[i].id).setAttribute('name', icons[i]);
         document.getElementsByClassName('cards')[i].style.visibility = 'hidden';
     };
