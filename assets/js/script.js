@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */ 
+
 addEventListener('DOMContentLoaded', gameSetup);
 
 let icons = ['black-panther.png', 'captain-america.png', 'hulk.png', 'iron-man.png', 'spider-man.png', 'thor.png', 'black-panther.png', 'captain-america.png', 'hulk.png', 'iron-man.png', 'spider-man.png', 'thor.png'];
