@@ -93,8 +93,3 @@ function gamePlay(event) {
         }, 500);
     }
 }
-
-// Event listeners for each card div to run gamePlay
-for (let x = 0; x <= 11; x++) {
-    document.getElementById(`card${x}Container`).addEventListener('click', gamePlay);
-}
