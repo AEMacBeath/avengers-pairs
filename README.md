@@ -1,1 +1,1 @@
-bugs = images don't load in deployed version. Removed .. from start of file path. 
+bugs = images don't load in deployed version. Removed ../ from start of file path. 
