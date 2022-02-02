@@ -3,7 +3,7 @@
 addEventListener('DOMContentLoaded', gameSetup());
 
 function gameSetup(event) {
-    document.getElementById('welcome').style.visibility = 'hidden';
+    document.getElementById('game-area').style.visibility = 'hidden';
     let icons = [
         'black-panther.png', 'captain-america.png', 'hulk.png', 'iron-man.png',
         'spider-man.png', 'thor.png', 'black-panther.png', 'captain-america.png',
@@ -25,6 +25,37 @@ function gameSetup(event) {
         document.getElementById(newContainerDiv.id).appendChild(newDiv);
         document.getElementById(document.getElementsByClassName('cards')[i].id).style.backgroundImage = `url(assets/images/${icons[i]})`;
         document.getElementById(newDiv.id).setAttribute('name', icons[i]);
+        document.getElementsByClassName('cards')[i].style.visibility = 'hidden';
+    }
+}
+
+function gameReady() {
+    let nickname = document.getElementById('nickname')
+    if (nickname.value == "") {
+        alert('Please enter nickname');
+    } else {
+        document.getElementById('welcome').style.visibility = 'hidden';
+        document.getElementById('game-area').style.visibility = 'visible';
+    }
+}
+
+function playAgain() {
+
+    attempts = 0;
+    matchedPairs = 0;
+
+    let icons = [
+        'black-panther.png', 'captain-america.png', 'hulk.png', 'iron-man.png',
+        'spider-man.png', 'thor.png', 'black-panther.png', 'captain-america.png',
+        'hulk.png', 'iron-man.png', 'spider-man.png', 'thor.png'
+    ];
+
+    document.getElementById('game-complete').style.visibility = 'hidden';
+    icons = icons.sort(() => Math.random() - 0.5);
+
+    for (let i = 0; i <= 11; i++) {
+        document.getElementById(document.getElementsByClassName('cards')[i].id).style.backgroundImage = `url(assets/images/${icons[i]})`;
+        document.getElementById(`card${i}`).setAttribute('name', icons[i]);
         document.getElementsByClassName('cards')[i].style.visibility = 'hidden';
     }
 }
@@ -83,7 +114,7 @@ function gamePlay(event) {
 
                 // Game Complete
                 if (matchedPairs == 6) {
-                    document.getElementById('game-complete').style.visibility='visible';
+                    document.getElementById('game-complete').style.visibility = 'visible';
                     let attemptSpan = document.getElementById('attempts');
                     attemptSpan.innerText = attempts;
 
@@ -95,6 +126,10 @@ function gamePlay(event) {
     }
 }
 
-for(let c = 0; c <= 11; c++) {
+// Add event listener
+for (let c = 0; c <= 11; c++) {
     document.getElementsByClassName('card-container')[c].addEventListener('click', gamePlay);
 }
+
+document.getElementById('play').addEventListener('click', gameReady);
+document.getElementById('play-again').addEventListener('click', playAgain);
