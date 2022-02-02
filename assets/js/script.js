@@ -1,20 +1,21 @@
 /*jshint esversion: 6 */
 
-addEventListener('DOMContentLoaded', gameSetup);
+addEventListener('DOMContentLoaded', gameSetup());
 
-let icons = [
-    'black-panther.png', 'captain-america.png', 'hulk.png', 'iron-man.png',
-    'spider-man.png', 'thor.png', 'black-panther.png', 'captain-america.png',
-    'hulk.png', 'iron-man.png', 'spider-man.png', 'thor.png'
-];
+function gameSetup(event) {
+    document.getElementById('welcome').style.visibility = 'hidden';
+    let icons = [
+        'black-panther.png', 'captain-america.png', 'hulk.png', 'iron-man.png',
+        'spider-man.png', 'thor.png', 'black-panther.png', 'captain-america.png',
+        'hulk.png', 'iron-man.png', 'spider-man.png', 'thor.png'
+    ];
 
-function gameSetup() {
     document.getElementById('game-complete').style.visibility = 'hidden';
     icons = icons.sort(() => Math.random() - 0.5);
 
     for (let i = 0; i <= 11; i++) {
         let newContainerDiv = document.createElement('div');
-        newContainerDiv.id = `card${i}container`;
+        newContainerDiv.id = `card${i}Container`;
         newContainerDiv.className = 'card-container';
         document.getElementById('game-area').appendChild(newContainerDiv);
 
@@ -42,7 +43,7 @@ function gamePlay(event) {
     let id = this.id;
     id = id.split('Container')[0];
     document.getElementById(id).style.visibility = 'visible';
-    attempts = attempts + 1;
+    attempts++;
 
     // Set clickedCard1 and clickedCard2 to icon name to check for a match
     if (clickedCard1 == '') {
@@ -92,4 +93,8 @@ function gamePlay(event) {
             }
         }, 500);
     }
+}
+
+for(let c = 0; c <= 11; c++) {
+    document.getElementsByClassName('card-container')[c].addEventListener('click', gamePlay);
 }

@@ -68,23 +68,30 @@ body {
     font-size: 100%;
 }
 
-#game-complete {
+#game-complete, #welcome {
     position: absolute;
     height: 60%;
     width: 80%;
     margin: 25% 10%;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
     color: rgb(175, 31, 36);
 }
 
-#game-complete > h2 {
+#game-complete {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#welcome {
+    background-color: white;
+}
+
+#game-complete > h2, #welcome > h2 {
     font-size: 2rem;
     text-transform: uppercase;
     padding: 0.5rem;
 }
 
-#game-complete p {
+#game-complete p, #welcome p {
     font-size: 1.3rem;
 }
 
