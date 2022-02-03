@@ -5,6 +5,7 @@
     margin: 0;
 }
 
+/* Standard site styles */
 body {
     font-family: 'Teko', sans-serif;
     letter-spacing: 1px;
@@ -30,6 +31,16 @@ body {
     margin: 5% 10%;
 }
 
+#instructions {
+    position: absolute;
+    bottom: 5%;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 100%;
+}
+
+/* Game elements */
 #game-area {
     position: absolute;
     height: 80%;
@@ -53,21 +64,11 @@ body {
     height: 100%;
     width: 100%;
     border-radius: 50%;
-
-    background-image: ""; /* to be allocated by javascript */
     background-size: cover;
     background-position: center;
 }
 
-#instructions {
-    position: absolute;
-    bottom: 5%;
-    height: auto;
-    width: 100%;
-    text-align: center;
-    font-size: 100%;
-}
-
+/* Welcome and Game Complete windows */
 #game-complete, #welcome {
     position: absolute;
     height: 60%;
@@ -77,12 +78,8 @@ body {
     color: rgb(175, 31, 36);
 }
 
-#game-complete {
+#game-complete, #welcome {
     background-color: rgba(255, 255, 255, 0.8);
-}
-
-#welcome {
-    background-color: white;
 }
 
 #game-complete > h2, #welcome > h2 {
@@ -98,4 +95,39 @@ body {
 #attempts {
     text-decoration: underline; 
     font-size: 2rem;
+}
+
+/* Nickname text input */
+#nickname {
+    border: solid rgb(175, 31, 36) 1px;
+    color: #af1f24;
+    margin: 10px;
+    padding: 3px;
+}
+
+/* Play Game & Play Again buttons */
+#play {
+    border: solid rgb(175, 31, 36) 1px;
+    color: rgb(175, 31, 36);
+    background-color: white;
+    padding: 3px;
+}
+
+#play:hover {
+    border: solid white 1px;
+    color: white;
+    background-color: rgb(175, 31, 36);
+}
+
+#play-again {
+    border: solid white 1px;
+    color: white;
+    background-color: rgb(175, 31, 36);
+    padding: 3px;
+}
+
+#play-again:hover {
+    border: solid rgb(175, 31, 36) 1px;
+    color: rgb(175, 31, 36);
+    background-color: white;
 }
