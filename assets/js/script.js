@@ -73,62 +73,60 @@ function gamePlay(event) {
     // Get card div id from container id and make clicked icon visible
     let id = this.id;
     id = id.split('Container')[0];
-    document.getElementById(id).style.visibility = 'visible';
     attempts++;
 
-    // Set clickedCard1 and clickedCard2 to icon name to check for a match
+    // Assign clickedCard1 & clickedCard2 icon name and ID to check for a match
     if (clickedCard1 == '') {
+        document.getElementById(id).style.visibility = 'visible';
         clickedCard1 = document.getElementById(id).getAttribute('name');
-    } else {
-        clickedCard2 = document.getElementById(id).getAttribute('name');
-    }
-
-    // Get Ids for clickedCard1 and clickedCard2
-    if (clickedCard1Id == '') {
         clickedCard1Id = id;
     } else {
-        clickedCard2Id = id;
-    }
+        if (clickedCard2 == '') {
+            document.getElementById(id).style.visibility = 'visible';
+            clickedCard2 = document.getElementById(id).getAttribute('name');
+            clickedCard2Id = id;
 
-    // When 2nd card is clicked compare clickedCard1 with clickedCard2. After 0.5 seconds hide cards if they don't match.
-    // Reset variables for next attempt.
-    if (clickedCard2 != '') {
-        setTimeout(function () {
-            if (clickedCard1 != clickedCard2) {
-                document.getElementById(clickedCard1Id).style.visibility = 'hidden';
-                document.getElementById(clickedCard2Id).style.visibility = 'hidden';
+            // When 2nd card is clicked compare clickedCard1 with clickedCard2. After 0.5 seconds hide cards if they don't match.
+            // Reset variables for next attempt.
+            if (clickedCard2 != '') {
+                setTimeout(function () {
+                    if (clickedCard1 != clickedCard2) {
+                        document.getElementById(clickedCard1Id).style.visibility = 'hidden';
+                        document.getElementById(clickedCard2Id).style.visibility = 'hidden';
 
-                clickedCard1 = '';
-                clickedCard2 = '';
-                clickedCard1Id = '';
-                clickedCard2Id = '';
+                        clickedCard1 = '';
+                        clickedCard2 = '';
+                        clickedCard1Id = '';
+                        clickedCard2Id = '';
 
-            } else {
-                matchedPairs++;
-                console.log('matchedPairs = ', matchedPairs);
+                    } else {
+                        matchedPairs++;
+                        console.log('matchedPairs = ', matchedPairs);
 
-                clickedCard1 = '';
-                clickedCard2 = '';
-                clickedCard1Id = '';
-                clickedCard2Id = '';
+                        clickedCard1 = '';
+                        clickedCard2 = '';
+                        clickedCard1Id = '';
+                        clickedCard2Id = '';
 
-                // Game Complete
-                if (matchedPairs == 6) {
-                    document.getElementById('game-complete').style.visibility = 'visible';
-                    let attemptSpan = document.getElementById('attempts');
-                    attemptSpan.innerText = attempts;
+                        // Game Complete
+                        if (matchedPairs == 6) {
+                            document.getElementById('game-complete').style.visibility = 'visible';
+                            let attemptSpan = document.getElementById('attempts');
+                            attemptSpan.innerText = attempts;
 
-                    console.log('gameComplete');
-                    console.log(attempts);
-                }
+                            console.log('gameComplete');
+                            console.log(attempts);
+                        }
+                    }
+                }, 500);
             }
-        }, 500);
+        } else {}
     }
 }
 
 // Add event listener
 for (let c = 0; c <= 11; c++) {
-    document.getElementsByClassName('card-container')[c].addEventListener('click', gamePlay);
+    let click = document.getElementsByClassName('card-container')[c].addEventListener('click', gamePlay);
 }
 
 document.getElementById('play').addEventListener('click', gameReady);
