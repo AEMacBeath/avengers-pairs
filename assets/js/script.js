@@ -81,7 +81,7 @@ function gamePlay(event) {
         clickedCard1 = document.getElementById(id).getAttribute('name');
         clickedCard1Id = id;
     } else {
-        if (clickedCard2 == '') {
+        if (clickedCard2 == '' && id !== clickedCard1Id) {
             document.getElementById(id).style.visibility = 'visible';
             clickedCard2 = document.getElementById(id).getAttribute('name');
             clickedCard2Id = id;
