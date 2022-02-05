@@ -6,9 +6,25 @@ The website users will be able to enter a nickname and play the game. Once compl
 
 Link to deplyed website - [Avengers Pairs](https://aemacbeath.github.io/avengers-pairs/)
 
+![am-i-responsive-screenshot](readme-screenshots/am-i-responsive-screenshot.png)
 
-bugs = images don't load in deployed version. Removed ../ from start of file path.
+## Table of Contents
+
+1. User Stories
+2. Features
+3. Testing
+4. Deployment
+5. Credits
+6. Technologies Used
+
+## User Stories
+
+- As a user of this site i can
+    - enter a nickname
+    - play the memory game
+    - 
+<!-- bugs = images don't load in deployed version. Removed ../ from start of file path.
 
 bugs = if user click 3rd icon before fucntion for 2nd click finishes 1st icon stays visible. Wrapped function in if to stop 3rd click doing anything.
 
-bugs = user can double click one circle to record as pair. id != clickedCard1
+bugs = user can double click one circle to record as pair. id != clickedCard1 -->
