@@ -11,6 +11,7 @@ function gameSetup(event) {
     ];
 
     document.getElementById('game-complete').style.visibility = 'hidden';
+
     icons = icons.sort(() => Math.random() - 0.5);
 
     for (let i = 0; i <= 11; i++) {
@@ -32,7 +33,7 @@ function gameSetup(event) {
 function gameReady() {
     let nickname = document.getElementById('nickname')
     if (nickname.value == "") {
-        alert('Please enter nickname');
+        document.getElementById('welcome-instructions').innerHTML = "Please enter a nickname";
     } else {
         document.getElementById('welcome').style.visibility = 'hidden';
         document.getElementById('game-area').style.visibility = 'visible';
