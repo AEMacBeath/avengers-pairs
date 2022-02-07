@@ -66,7 +66,13 @@ When a white circle is clicked an Avengers icon will appear. If a pair is found 
 
 ### Game complete
 
+The game complete screen contains
+- a congratulations heading.
+- a count of how many clicks it took the user to complete the game.
+- a Play Again button to restart the game.
 
+**Game complete screen on all device sizes**<br>
+![Game complete screenshot](readme-screenshots/game-complete-screenshot.png)
 
 
 
