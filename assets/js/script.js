@@ -31,7 +31,7 @@ function gameSetup(event) {
 }
 
 function gameReady() {
-    let nickname = document.getElementById('nickname')
+    let nickname = document.getElementById('nickname');
     if (nickname.value == "") {
         document.getElementById('welcome-instructions').innerHTML = "Please enter a nickname";
     } else {
@@ -127,7 +127,7 @@ function gamePlay(event) {
 
 // Add event listener
 for (let c = 0; c <= 11; c++) {
-    let click = document.getElementsByClassName('card-container')[c].addEventListener('click', gamePlay);
+    document.getElementsByClassName('card-container')[c].addEventListener('click', gamePlay);
 }
 
 document.getElementById('play').addEventListener('click', gameReady);
