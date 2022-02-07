@@ -10,8 +10,8 @@ Link to deplyed website - [Avengers Pairs](https://aemacbeath.github.io/avengers
 
 ## Table of Contents
 
-1. User Stories
-2. Features
+1. [User Stories](#user-stories)
+2. [Features](#features)
 3. Testing
 4. Deployment
 5. Credits
@@ -23,6 +23,53 @@ Link to deplyed website - [Avengers Pairs](https://aemacbeath.github.io/avengers
     - enter a nickname
     - play the memory game
     - 
+
+## Features
+
+### Consistant Features
+
+The below features remain the same throughout the game. 
+- The background image
+    - on small devices this is an image of various Avengers icons. 
+    - on medium to large devices this is a picture of the Marvel Cinematic Universe characters.
+- A heading - MATCH THE AVENGERS at the top of the red section.
+- Game instuctions at the bottom of the red section. 
+
+The below screen shots show all these features on small and medium / large devices. 
+
+**Small devices**<br>
+![Small screenshot](readme-screenshots/small-devices-screenshot.png)
+
+**Medium / Large devices**<br>
+![Medium to large screenshot](readme-screenshots/md-lg-devices-screenshot.png)
+
+### Welcome Screen
+
+The welcome screen consists of the following elements as shown in the below screenshot.
+- A WELCOME! heading.
+- Game instructions.
+- An input section for users to add a nickname of their choice.
+- A Play Game button to begin the game.
+
+**Welcome Screen on all device sizes**<br>
+![Welcome screen](readme-screenshots/welcome-screenshot.png)
+
+### Enter nickname reminder
+
+### Game screen
+
+At the start, the game screen contains 12 white circes, as shown in the below screenshot.<br>
+![Starting game screenshot](readme-screenshots/starting-game-screenshot.png)
+
+When a white circle is clicked an Avengers icon will appear. If a pair is found the icons remain in place of the white circle, as shown below.<br>
+![Mid game screenshot](readme-screenshots/mid-game-screenshot.png)
+
+### Game complete
+
+
+
+
+
 <!-- bugs = images don't load in deployed version. Removed ../ from start of file path.
 
 bugs = if user click 3rd icon before fucntion for 2nd click finishes 1st icon stays visible. Wrapped function in if to stop 3rd click doing anything.
