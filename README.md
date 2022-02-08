@@ -34,7 +34,7 @@ As a user of this site I can
 
 ## Features
 
-### Consistent Features
+## Consistent Features
 
 The below features remain the same throughout the game. 
 - The background image
@@ -51,7 +51,7 @@ The below screen shots show all these features on small and medium / large devic
 **Medium / Large devices**<br>
 ![Medium to large screenshot](readme-screenshots/md-lg-devices-screenshot.png)
 
-### Welcome Screen
+## Welcome Screen
 
 The welcome screen consists of the following elements as shown in the below screenshot.
 - A WELCOME! heading.
@@ -62,11 +62,11 @@ The welcome screen consists of the following elements as shown in the below scre
 **Welcome Screen on all device sizes**<br>
 ![Welcome screen](readme-screenshots/welcome-screenshot.png)
 
-### Enter nickname reminder
+## Enter nickname reminder
 A message to ask users to enter a nickname if left blank on the welcome screen.<br>
 ![Enter nickname message](readme-screenshots/enter-nickname-screenshot.png)
 
-### Game screen
+## Game screen
 
 At the start, the game screen contains 12 white circles, as shown in the below screenshot.<br>
 ![Starting game screenshot](readme-screenshots/starting-game-screenshot.png)
@@ -74,7 +74,7 @@ At the start, the game screen contains 12 white circles, as shown in the below s
 When a white circle is clicked an Avengers icon will appear. If a pair is found the icons remain in place of the white circle, as shown below.<br>
 ![Mid game screenshot](readme-screenshots/mid-game-screenshot.png)
 
-### Game complete
+## Game complete
 
 The game complete screen contains
 - a congratulations heading.
@@ -95,12 +95,12 @@ The game complete screen contains
 
 ## Testing
 
-### Bugs
+## Bugs
 
 - Images did not load in deployed version. Removed ../ from start of file path to correct the error.
 - White bar appeared at the bottom of the screen on large devices. Changed background-image to fixed.
 
-### Validator Testing
+## Validator Testing
 - HTML - No errors returned when passing through the [W3C HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Faemacbeath.github.io%2Favengers-pairs%2F)
 - CSS - No errors returned when passing through the [W3C CSS Validator (Jigsaw)](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Faemacbeath.github.io%2Favengers-pairs%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - Javascript - No errors found using [Jshint](https://jshint.com/)
