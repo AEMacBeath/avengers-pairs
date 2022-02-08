@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,33 +10,46 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Avengers Pairs</title>
 </head>
+
 <body>
     <section id="main-container">
+        <!-- Container to center the game area -->
         <div id="game-area-bg">
+            <!-- Red background div to create game area -->
             <div id="logo-container">
+                <!-- Game heading - consistant throuought game -->
                 <h1 id="logo">MATCH THE AVENGERS</h1>
             </div>
             <div id="welcome">
+                <!-- First visible screen on launch -->
                 <h2>Welcome!</h2>
                 <p id="welcome-instructions">Click the white circles to reveal the icons.<br>
                     Match all pairs to win.</p>
+                <!-- Game instructions. Changed by js to Please Enter Username if the below input is left blank -->
                 <input type="text" id="nickname" placeholder="Enter Nickname" required>
-                <input type="submit" id="play" value="Play Game">
+                <!-- Requitred input for user to enter a nickname -->
+                <input type="submit" id="play" value="Play Game"> <!-- Button to begin the game -->
             </div>
-            <div id="game-area"></div>
+            <div id="game-area"></div> <!-- Square area to hold the 9 game circles created by js gameSetup() -->
             <div id="instructions">
+                <!-- Instructions that remain in place throughout the game -->
                 <p>Click the white circles to reveal the icons.<br>
                     Match all pairs to win.
                 </p>
             </div>
             <div id="game-complete">
+                <!-- Visible when the game is completed. Shows the user how many clic -->
                 <h2>Congratulations</h2>
-                <p>You completed the game in <br>
-                <span id="attempts"></span> clicks</p>
+                <p>
+                    You completed the game in <br>
+                    <span id="attempts"></span> <!-- Displays how many clicks it took the user to complete the game -->
+                    clicks
+                </p>
                 <input type="submit" id="play-again" value="Play Again">
             </div>
         </div>
     </section>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
