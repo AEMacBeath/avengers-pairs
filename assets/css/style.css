@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
 
-/* General site styles */
+/* General styles */
 * {
     border: none;
     margin: 0;
@@ -14,7 +14,7 @@ body {
     background-size: cover;
 }
 
-/* Game board for devices max-width 425px */
+/* Container to center the game area */
 #main-container {
     display: flex;
     justify-content: center;
@@ -25,6 +25,7 @@ body {
     text-align: center;
 }
 
+/* Red background div to create game board structure */
 #game-area-bg {
     position: absolute;
     height: 450px;
@@ -34,6 +35,7 @@ body {
     border-radius: 2.5%;
 }
 
+/* MATCH THE AVENGERS game heading */
 #logo-container {
     position: absolute;
     top: 0%;
@@ -43,6 +45,7 @@ body {
     font-size: 1.5rem;
 }
 
+/* Game instructions at the bottom of the game board */
 #instructions {
     position: absolute;
     bottom: 0%;
@@ -52,7 +55,7 @@ body {
     font-size: 1rem;
 }
 
-/* Game elements */
+/* Square div to hold game area */
 #game-area {
     position: absolute;
     height: 300px;
@@ -61,6 +64,7 @@ body {
     text-align: center;
 }
 
+/* Styling for divs created by js - before clicked */
 .card-container {
     position: relative;
     display: inline-block;
@@ -71,6 +75,7 @@ body {
     background-color: white;
 }
 
+/* Styling for icons to be revealed when clicked */
 .cards {
     position: relative;
     display: inline-block;
