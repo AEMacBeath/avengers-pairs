@@ -114,6 +114,10 @@ body {
     font-size: 2rem;
 }
 
+#user-nickname {
+    font-size: 1.5rem;
+}
+
 /* Nickname text input */
 #nickname {
     border: solid rgb(175, 31, 36) 1px;

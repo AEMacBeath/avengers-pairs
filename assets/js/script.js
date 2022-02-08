@@ -4,13 +4,13 @@ addEventListener('DOMContentLoaded', gameSetup());
 
 function gameSetup(event) {
     document.getElementById('game-area').style.visibility = 'hidden';
+    document.getElementById('game-complete').style.visibility = 'hidden';
+
     let icons = [
         'black-panther.png', 'captain-america.png', 'hulk.png', 'iron-man.png',
         'spider-man.png', 'thor.png', 'black-panther.png', 'captain-america.png',
         'hulk.png', 'iron-man.png', 'spider-man.png', 'thor.png'
     ];
-
-    document.getElementById('game-complete').style.visibility = 'hidden';
 
     icons = icons.sort(() => Math.random() - 0.5);
 
@@ -112,8 +112,8 @@ function gamePlay(event) {
                         // Game Complete
                         if (matchedPairs == 6) {
                             document.getElementById('game-complete').style.visibility = 'visible';
-                            let attemptSpan = document.getElementById('attempts');
-                            attemptSpan.innerText = attempts;
+                            document.getElementById('attempts').innerText = attempts;
+                            document.getElementById('user-nickname').innerText = nickname.value;
 
                             console.log('gameComplete');
                             console.log(attempts);
@@ -121,7 +121,7 @@ function gamePlay(event) {
                     }
                 }, 500);
             }
-        } else {}
+        }
     }
 }
 
