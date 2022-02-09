@@ -23,6 +23,7 @@ Link to deployed website - [Avengers Pairs](https://aemacbeath.github.io/avenger
     - [Validator Testing](#validator-testing)
 5. [Deployment](#deployment)
 6. [Credits](#credits)
+7. [Future Development]()
 
 ## User Stories
 
@@ -101,9 +102,12 @@ The game complete screen contains
 - White bar appeared at the bottom of the screen on large devices. Changed background-image to fixed.
 
 ## Validator Testing
-- HTML - No errors returned when passing through the [W3C HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Faemacbeath.github.io%2Favengers-pairs%2F)
-- CSS - No errors returned when passing through the [W3C CSS Validator (Jigsaw)](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Faemacbeath.github.io%2Favengers-pairs%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-- Javascript - No errors found using [Jshint](https://jshint.com/)
+- HTML - No errors returned when passing through the [W3C HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Faemacbeath.github.io%2Favengers-pairs%2F).
+- CSS - No errors returned when passing through the [W3C CSS Validator (Jigsaw)](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Faemacbeath.github.io%2Favengers-pairs%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
+- Javascript - No errors found using [Jshint](https://jshint.com/) as shown in the below screen shot.
+
+![Jshint Screenshot](readme-screenshots/jshint-screenshot.png)
+
 - Accessibility
     - All font used is easy to read and contrasts with background colors.
     - This has been tested using Lighthouse in devtools.
@@ -126,3 +130,7 @@ This site was deployed to GitHub pages by following the below steps:
 - Small devices background image is from [wallpapercave.com](https://wallpapercave.com/w/wp9535327).
 - The Avengers Icons used in the game are from [vectorified.com](https://vectorified.com/download-image#heroes---icon-9.jpg).
     - Icons where cropped using Microsoft Snipping Tool. 
+
+## Future Development
+
+- Add a scoreboard to show users how their score stacks up with other players.
