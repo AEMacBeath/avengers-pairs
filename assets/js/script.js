@@ -117,8 +117,8 @@ function gamePlay(event) {
                         // Show game complete screen
                         if (matchedPairs == 6) {
                             document.getElementById('game-complete').style.visibility = 'visible';
+                            document.getElementById('user-nickname').innerHTML = nickname.value;
                             document.getElementById('attempts').innerText = attempts;
-                            document.getElementById('user-nickname').innerText = nickname.value;
                         }
                     }
                 }, 500);
