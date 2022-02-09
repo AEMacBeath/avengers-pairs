@@ -1,30 +1,36 @@
-/*jshint esversion: 6 */
+// jshint esversion: 6
 
 addEventListener('DOMContentLoaded', gameSetup());
 
+/**
+ * gameSetup creates 12 container divs with card divs in them.
+ * Each card div is allocated a random Avnegers Icon from the icons array.
+ * The card divs are hidden and the container divs appear as white circles in the game-area.
+ * @param event 
+ */
 function gameSetup(event) {
-    /* Hide game-area and game-complete screens */
+    // Hide game-area and game-complete screens
     document.getElementById('game-area').style.visibility = 'hidden';
     document.getElementById('game-complete').style.visibility = 'hidden';
 
-    /* Create an array of Avenger Icon images */
+    // Create an array of Avenger Icon images
     let icons = [
         'black-panther.png', 'captain-america.png', 'hulk.png', 'iron-man.png',
         'spider-man.png', 'thor.png', 'black-panther.png', 'captain-america.png',
         'hulk.png', 'iron-man.png', 'spider-man.png', 'thor.png'
     ];
 
-    /* Randomise order of icons array */
+    // Randomise order of icons array
     icons = icons.sort(() => Math.random() - 0.5);
 
-    /* Create container divs to be shown as white circles for the user to click */
+    // Create container divs to be shown as white circles for the user to click
     for (let i = 0; i <= 11; i++) {
         let newContainerDiv = document.createElement('div');
         newContainerDiv.id = `card${i}Container`;
         newContainerDiv.className = 'card-container';
         document.getElementById('game-area').appendChild(newContainerDiv);
 
-        /* Create hidden divs with a random Avenger icon set as the background image to appear when clicked */
+        // Create hidden divs with a random Avenger icon set as the background image to appear when clicked
         let newDiv = document.createElement('div');
         newDiv.id = `card${i}`;
         newDiv.className = 'cards';
@@ -37,42 +43,22 @@ function gameSetup(event) {
 
 let nickname = '';
 
+/**
+ * gameReady check that the user has entered a nickname. 
+ * If they have it hides the welcome screen and makes the game-area visible.
+ * If they have not, the instruction text on the welcom screen changes to Please enter a nickname.
+ * @param event
+ */
 function gameReady() {
-    /* Check the user has entered a nickname */
+    // Check the user has entered a nickname
     nickname = document.getElementById('nickname');
     if (nickname.value == "") {
-        /* Display message asking user to enter nuckname */
+        // Display message asking user to enter nuckname
         document.getElementById('welcome-instructions').innerHTML = "Please enter a nickname";
     } else {
-        /* Hide welcome screen and unhide game-area */
+        // Hide welcome screen and unhide game-area
         document.getElementById('welcome').style.visibility = 'hidden';
         document.getElementById('game-area').style.visibility = 'visible';
-    }
-}
-
-function playAgain(event) {
-    /* Reset variables so the game can be played again */
-    attempts = 0;
-    matchedPairs = 0;
-
-    /* Create an array of Avenger Icon images */
-    let icons = [
-        'black-panther.png', 'captain-america.png', 'hulk.png', 'iron-man.png',
-        'spider-man.png', 'thor.png', 'black-panther.png', 'captain-america.png',
-        'hulk.png', 'iron-man.png', 'spider-man.png', 'thor.png'
-    ];
-
-    /* Hide game-complete screen */
-    document.getElementById('game-complete').style.visibility = 'hidden';
-
-    /* Randomise order of icons array */
-    icons = icons.sort(() => Math.random() - 0.5);
-
-    /* Allocated random Avenger icons as the background image to appear when clicked */
-    for (let i = 0; i <= 11; i++) {
-        document.getElementById(document.getElementsByClassName('cards')[i].id).style.backgroundImage = `url(assets/images/${icons[i]})`;
-        document.getElementById(`card${i}`).setAttribute('name', icons[i]);
-        document.getElementsByClassName('cards')[i].style.visibility = 'hidden';
     }
 }
 
@@ -84,7 +70,13 @@ let clickedCard2Id = '';
 let matchedPairs = 0;
 let attempts = 0;
 
-// Play game
+/**
+ * gamePlay function splits the id from the clicked div to get the card div id. 
+ * It sets clickedCard1 or clickedCard2 value and checks if they match.
+ * If a match is found the card divs remain visible.
+ * If no match if found the card divs are hidden again.
+ * @param {*} event 
+ */
 function gamePlay(event) {
     // Get card div id from clicked container id
     let id = this.id;
@@ -132,6 +124,37 @@ function gamePlay(event) {
                 }, 500);
             }
         }
+    }
+}
+
+/**
+ * playAgain hides the card divs and randomly allocates the icons again.
+ * Ready for the user to try again.
+ * @param event 
+ */
+function playAgain(event) {
+    // Reset variables so the game can be played again
+    attempts = 0;
+    matchedPairs = 0;
+
+    // Create an array of Avenger Icon images
+    let icons = [
+        'black-panther.png', 'captain-america.png', 'hulk.png', 'iron-man.png',
+        'spider-man.png', 'thor.png', 'black-panther.png', 'captain-america.png',
+        'hulk.png', 'iron-man.png', 'spider-man.png', 'thor.png'
+    ];
+
+    // Hide game-complete screen
+    document.getElementById('game-complete').style.visibility = 'hidden';
+
+    // Randomise order of icons array
+    icons = icons.sort(() => Math.random() - 0.5);
+
+    // Allocated random Avenger icons as the background image to appear when clicked
+    for (let i = 0; i <= 11; i++) {
+        document.getElementById(document.getElementsByClassName('cards')[i].id).style.backgroundImage = `url(assets/images/${icons[i]})`;
+        document.getElementById(`card${i}`).setAttribute('name', icons[i]);
+        document.getElementsByClassName('cards')[i].style.visibility = 'hidden';
     }
 }
 
